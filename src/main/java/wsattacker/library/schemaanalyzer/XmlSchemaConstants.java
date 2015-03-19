@@ -18,18 +18,17 @@
  */
 package wsattacker.library.schemaanalyzer;
 
-public class TestfilePath
+/**
+ * * This class contains constants used by the SchemaAnalyzer, e.g., the Name of the Any Element.
+ */
+final public class XmlSchemaConstants
 {
 
-    public static final String SOAP11_PATH_TO_EXPANDED_XML = "src/test/resources/soap11_envelope_header_body.xml";
+    static final String NAME_ELEMENTLOCALNAME = "name";
 
-    public static final String SOAP11_PATH_TO_ENVELOPE_ELEMENT_XML = "src/test/resources/soap11_envelope_only.xml";
+    static final String NAME_ANY_ELEMENT = "any";
 
-    public static final String SOAP11_PATH_TO_SIGNED_XML = "src/test/resources/soap11_example_signed_message.xml";
+    static final String NAME_SCHEMA_ELEMENT = "schema";
 
-    public static final String SOAP12_PATH_TO_EXPANDED_XML = "src/test/resources/soap12_envelope_header_body.xml";
-
-    public static final String SOAP12_PATH_TO_ENVELOPE_ELEMENT_XML = "src/test/resources/soap12_envelope_only.xml";
-
-    public static final String SOAP12_PATH_TO_SIGNED_XML = "src/test/resources/soap12_example_signed_message.xml";
+    static final String NAME_SCHEMA_SEQUENCE = "sequence";
 }

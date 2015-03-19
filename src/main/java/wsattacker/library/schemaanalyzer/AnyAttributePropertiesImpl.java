@@ -24,13 +24,13 @@ import wsattacker.library.xmlutilities.dom.DomUtilities;
 /**
  * Wrapper Class. Can be expanded if additional features are necessary.
  */
-public class AnyElementPropertiesImpl
-    implements AnyElementProperties
+public class AnyAttributePropertiesImpl
+    implements AnyAttributeProperties
 {
 
     Element anyElement, documentElement;
 
-    public AnyElementPropertiesImpl( Element anyElement, Element documentElement )
+    public AnyAttributePropertiesImpl( Element anyElement, Element documentElement )
     {
         this.anyElement = anyElement;
         this.documentElement = documentElement;
@@ -81,28 +81,8 @@ public class AnyElementPropertiesImpl
         return getNamespaceAttributeValue().equals( "##any" );
     }
 
-    /*
-     * (non-Javadoc)
-     * @see wsattacker.plugin.signatureWrapping.schema.AnyElementProperties#needsWrapper (java.lang.String)
-     */
     @Override
-    public boolean needsWrapper( String childNamespaceURI )
-    {
-        boolean needsWrapper;
-        String namespace = anyElement.getAttribute( "namespace" );
-        if ( namespace != null && namespace.equals( "##other" ) )
-        {
-            needsWrapper = documentElement.getNamespaceURI().equals( childNamespaceURI );
-        }
-        else
-        {
-            needsWrapper = !allowsDirectChildelements();
-        }
-        return needsWrapper;
-    }
-
-    @Override
-    public int compareTo( AnyElementProperties other )
+    public int compareTo( AnyAttributeProperties other )
     {
         return DomUtilities.getFastXPath( documentElement ).compareTo( DomUtilities.getFastXPath( other.getDocumentElement() ) );
     }
@@ -111,7 +91,7 @@ public class AnyElementPropertiesImpl
     public boolean equals( Object other )
     {
         boolean isEqual = false;
-        if ( other instanceof AnyElementPropertiesImpl )
+        if ( other instanceof AnyAttributePropertiesImpl )
         {
             isEqual =
                 DomUtilities.getFastXPath( documentElement ).equals( DomUtilities.getFastXPath( ( (AnyElementProperties) other ).getDocumentElement() ) );
