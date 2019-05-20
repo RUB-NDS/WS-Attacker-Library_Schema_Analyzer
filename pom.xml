@@ -7,7 +7,7 @@
     <name>WS-Attacker-Library_Schema_Analyzer</name>
     <inceptionYear>2013</inceptionYear>
     <groupId>wsattacker.library</groupId>
-    <version>1.9-SNAPSHOT</version>
+    <version>1.10</version>
 
     <developers>
         <developer>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>wsattacker.library</groupId>
             <artifactId>XML_Utilities_Library</artifactId>
-            <version>1.9-SNAPSHOT</version>
+            <version>1.10</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
