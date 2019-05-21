@@ -2,11 +2,10 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>Schema_Analyzer_Library</artifactId>
+    <groupId>wsattacker.library</groupId>
+    <artifactId>Schema_Analyzer</artifactId>
     <name>WS-Attacker-Library_Schema_Analyzer</name>
     <inceptionYear>2013</inceptionYear>
-    <groupId>wsattacker.library</groupId>
     <version>1.10</version>
 
     <developers>
@@ -24,10 +23,17 @@
         </developer>
     </developers>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
-            <groupId>wsattacker.library</groupId>
-            <artifactId>XML_Utilities_Library</artifactId>
+            <groupId>com.github.rub-nds</groupId>
+            <artifactId>WS-Attacker-Library_XML_Utilities</artifactId>
             <version>1.10</version>
         </dependency>
         <dependency>
